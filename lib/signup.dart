@@ -1,11 +1,10 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:getwidget/getwidget.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-class Home extends StatelessWidget {
+class Signup extends StatelessWidget {
   //const Home({Key? key}) : super(key: key);
   int _len = 500;
 
@@ -18,6 +17,7 @@ class Home extends StatelessWidget {
           child: Container(
             color: HexColor("#03045e"),
             width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
             child: Center(
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -41,17 +41,17 @@ class Home extends StatelessWidget {
                               children: [
                                 SizedBox(height: 24),
                                 Text(
-                                  'Say Something',
+                                  'Create Account',
                                   style: GoogleFonts.lato(
                                     color: Colors.white,
-                                    fontSize: 48,
+                                    fontSize: 32,
                                     fontWeight: FontWeight.w900,
                                     fontStyle: FontStyle.normal,
                                   ),
                                 ),
                                 SizedBox(height: 8),
                                 Text(
-                                  'Write an anonymous message for Inside_cua',
+                                  'create an account to get started',
                                   style: GoogleFonts.lato(
                                     color: Colors.indigo.shade100,
                                     fontSize: 14,
@@ -67,56 +67,83 @@ class Home extends StatelessWidget {
                                 SizedBox(
                                   width:
                                       MediaQuery.of(context).size.width * 0.40,
-                                  height: 250,
+                                  // height: 250,
                                   child: TextFormField(
-                                    maxLength: _len,
-                                    maxLines: 30,
+                                    cursorHeight: 20,
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      height: 2,
+                                    ),
+                                    // maxLength: _len,
+                                    //   maxLines: 30,
                                     decoration: InputDecoration(
+
                                         //counterText: '$_len characters left',
                                         counterStyle:
                                             TextStyle(color: Colors.white),
-                                        labelText: 'Say Something',
+                                        labelText: 'User Name',
                                         floatingLabelBehavior:
                                             FloatingLabelBehavior.always,
                                         labelStyle: GoogleFonts.lato(
-                                            fontSize: 12, color: Colors.white)),
+                                            fontSize: 16, color: Colors.white)),
                                   ),
                                 ),
+
                                 SizedBox(
-                                  height: 24,
+                                  height: 16,
                                 ),
 
-                                Container(
-                                  // color: Colors.grey.shade500,
+                                SizedBox(
                                   width:
                                       MediaQuery.of(context).size.width * 0.40,
-                                  height: 160,
-                                  child: GFBorder(
-                                    dashedLine: [4, 6],
-                                    type: GFBorderType.rect,
-                                    color: Colors.white30,
-                                    child: Center(
-                                      child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          ElevatedButton(
-                                            onPressed: () {},
-                                            child: Text('Upload file'),
-                                          ),
-                                          SizedBox(
-                                            height: 8,
-                                          ),
-                                          Text(
-                                            'upload videos, images,pdf\'s',
-                                            style: GoogleFonts.lato(
-                                              fontSize: 12,
-                                              color: HexColor('757575'),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
+                                  // height: 250,
+                                  child: TextFormField(
+                                    cursorHeight: 20,
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      height: 2,
                                     ),
+                                    // maxLength: _len,
+                                    //   maxLines: 30,
+                                    decoration: InputDecoration(
+
+                                        //counterText: '$_len characters left',
+                                        counterStyle:
+                                            TextStyle(color: Colors.white),
+                                        labelText: 'Email',
+                                        floatingLabelBehavior:
+                                            FloatingLabelBehavior.always,
+                                        labelStyle: GoogleFonts.lato(
+                                            fontSize: 16, color: Colors.white)),
+                                  ),
+                                ),
+
+                                SizedBox(
+                                  height: 16,
+                                ),
+
+                                SizedBox(
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.40,
+                                  // height: 250,
+                                  child: TextFormField(
+                                    cursorHeight: 20,
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      height: 2,
+                                    ),
+                                    // maxLength: _len,
+                                    //   maxLines: 30,
+                                    decoration: InputDecoration(
+
+                                        //counterText: '$_len characters left',
+                                        counterStyle:
+                                            TextStyle(color: Colors.white),
+                                        labelText: 'Password',
+                                        floatingLabelBehavior:
+                                            FloatingLabelBehavior.always,
+                                        labelStyle: GoogleFonts.lato(
+                                            fontSize: 16, color: Colors.white)),
                                   ),
                                 ),
 
@@ -139,7 +166,7 @@ class Home extends StatelessWidget {
                                       onPressed: () {},
                                       style: ElevatedButton.styleFrom(
                                           primary: Colors.transparent),
-                                      child: Text('Submit'),
+                                      child: Text('Create Account'),
                                     ),
                                   ),
                                 ),
